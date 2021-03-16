@@ -6,8 +6,10 @@ const port = 3000;
 
 app.use(express.static('public'));
 
+app.set('views', './views');
+
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.render('index.pug');
 });
 
 app.get('/catinfo', (req, res) => {
